@@ -5,12 +5,9 @@ let minTemp = 100;
 let maxTemp = -100;
 
 
-function preload() {
-  myTable = loadTable("assets/rivers_world_-_Data.csv", "csv", "header");
-}
+async function setup() {
+  myTable = await loadTable("assets/rivers_world_-_Data.csv", ",", "header");
 
-
-function setup() {
   createCanvas(windowWidth, windowHeight);
   textFont("Arial");
 
